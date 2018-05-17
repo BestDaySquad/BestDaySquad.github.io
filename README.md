@@ -1,3 +1,4 @@
 # BestDaySquad.github.io
 
-<b>This is Readme</b>
+<center><b>This is Readme</b></center>
+> Nothing.
