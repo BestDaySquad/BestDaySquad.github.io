@@ -1,0 +1,169 @@
+body
+{
+   background-color: #FF0000;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+}
+#wb_header
+{
+   clear: both;
+   position: fixed;
+   left: 0;
+   top: 0;
+   z-index: 7777;
+   table-layout: fixed;
+   display: table;
+   text-align: center;
+   width: 100%;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #CCCCCC;
+   box-sizing: border-box;
+   margin: 0;
+}
+#header
+{
+   box-sizing: border-box;
+   padding: 25px 15px 25px 15px;
+   margin-right: auto;
+   margin-left: auto;
+}
+#header .row
+{
+   margin-right: -15px;
+   margin-left: -15px;
+}
+#header > .row > .col-1, #header > .row > .col-2
+{
+   box-sizing: border-box;
+   font-size: 0px;
+   min-height: 1px;
+   padding-right: 15px;
+   padding-left: 15px;
+   position: relative;
+}
+#header > .row > .col-1, #header > .row > .col-2
+{
+   float: left;
+}
+#header > .row > .col-1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   width: 25%;
+   text-align: left;
+}
+#header > .row > .col-2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #FFFFFF;
+   width: 75%;
+   text-align: left;
+}
+#header:before,
+#header:after,
+#header .row:before,
+#header .row:after
+{
+   display: table;
+   content: " ";
+}
+#header:after,
+#header .row:after
+{
+   clear: both;
+}
+@media (max-width: 320px)
+{
+#header > .row > .col-1, #header > .row > .col-2
+{
+   float: none;
+   width: 100% !important;
+}
+}
+#Breadcrumb1
+{
+   padding: 8px 15px 8px 15px;
+   list-style: none;
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #C0C0C0;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 0;
+   margin: 0;
+   text-align: left;
+}
+#Breadcrumb1 > li
+{
+   display: inline-block;
+   font-size: 24px;
+}
+#Breadcrumb1 a
+{
+   color: #A2A2A2;
+   text-decoration: none;
+}
+#Breadcrumb1 a:hover
+{
+   color: #007BFF;
+   text-decoration: none;
+}
+#Breadcrumb1 > .active
+{
+   color: #007BFF;
+}
+#Breadcrumb1 > li + li:before
+{
+   content: "";
+   padding: 0 5px;
+   color: #C0C0C0;
+}
+#StickyLayer
+{
+   background-color: #3E3E3E;
+   background-image: none;
+   opacity: 0.77;
+}
+#wb_up-arrow
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #3E3E3E;
+   text-align: center;
+   margin: 0;
+   padding: 4px 4px 4px 4px;
+   vertical-align: top;
+}
+#wb_up-arrow:hover
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #3E3E3E;
+}
+#up-arrow
+{
+   height: 24px;
+   width: 24px;
+}
+#up-arrow i
+{
+   color: #FFFFFF;
+   display: inline-block;
+   font-size: 24px;
+   line-height: 24px;
+   vertical-align: middle;
+   width: 14px;
+}
+#wb_up-arrow:hover i
+{
+   color: #007BFF;
+}

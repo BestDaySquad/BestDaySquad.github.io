@@ -1,69 +1,56 @@
    
    $(document).ready(function()
    {
-      $("a[href*='#LayerLeft']").click(function(event)
+      $("a[href*='#header']").click(function(event)
       {
          event.preventDefault();
-         $('html, body').stop().animate({ scrollTop: $('#LayerLeft').offset().top }, 600, 'easeInCubic');
+         $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutCirc');
       });
-      function skrollrInit()
+      $(document).on('click','.ThemeableMenu1-navbar-collapse.in',function(e)
       {
-         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+         if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+         {
+            $(this).collapse('hide');
+         }
+      });
+      $("a[href*='#home']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_home').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#services']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_services').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#features']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_features').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#banner1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_banner1').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#portfolio1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_portfolio1').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#newsletter']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_newsletter').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#questions']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_questions').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+      if (iOS)
+      {
+         $('#wb_home,#wb_banner1').css('background-attachment', 'scroll');
       }
-      skrollrInit();
-      $("a[href*='#news']").click(function(event)
-      {
-         event.preventDefault();
-         $('html, body').stop().animate({ scrollTop: $('#wb_news').offset().top }, 600, 'easeInCubic');
-      });
-      $("#StickyLayer").stickylayer({orientation: 7, position: [0, 25], delay: 0});
-      $("a[href*='#waitForItTitle']").click(function(event)
-      {
-         event.preventDefault();
-         $('html, body').stop().animate({ scrollTop: $('#wb_waitForItTitle').offset().top }, 600, 'easeInCubic');
-      });
-      $("a[href*='#TabIntro']").click(function(event)
-      {
-         event.preventDefault();
-         $('html, body').stop().animate({ scrollTop: $('#wb_TabIntro').offset().top }, 600, 'easeInCubic');
-      });
-      $("#jQueryTabs1 a").click(function()
-      {
-         $(this).tab('show');
-      });
-      $("a[href*='#services-title']").click(function(event)
-      {
-         event.preventDefault();
-         $('html, body').stop().animate({ scrollTop: $('#wb_services-title').offset().top }, 600, 'easeInCubic');
-      });
-      $("a[href*='#footer']").click(function(event)
-      {
-         event.preventDefault();
-         $('html, body').stop().animate({ scrollTop: $('#wb_footer').offset().top }, 600, 'easeInCubic');
-      });
-   });
-   
-   $(document).ready(function()
-   {
-      function waitForItUpdate()
-      {
-         // change the date here
-         var dateFuture = new Date("December 31, 2018 12:00:00");
-         var dateNow = new Date();
-         var seconds = Math.floor((dateFuture - (dateNow))/1000);
-         var minutes = Math.floor(seconds/60);
-         var hours = Math.floor(minutes/60);
-         var days = Math.floor(hours/24);
-   
-         hours = Math.round(hours-(days*24));
-         minutes = Math.round(minutes-(days*24*60)-(hours*60));
-         seconds = Math.round(seconds-(days*24*60*60)-(hours*60*60)-(minutes*60));
-                                    
-         $('#waitForItDays').html(days);
-         $('#waitForItHours').html(hours);
-         $('#waitForItMinutes').html(minutes);
-         $('#waitForItSeconds').html(seconds);   
-      }
-      waitForItUpdate();
-      setInterval(waitForItUpdate, 1000);
    });
